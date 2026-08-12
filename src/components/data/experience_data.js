@@ -1,3 +1,4 @@
+import anduril from '../../assets/anduril.webp';
 import fidelity from '../../assets/fidelity.webp';
 import microsoft from '../../assets/microsoft.webp';
 export const experience_data = {
@@ -60,13 +61,13 @@ export const experience_data = {
     },
     'Backend Software Engineer': {
       location: 'Redmond WA',
-      dates: 'Nov 2022 - Present',
+      dates: 'Nov 2022 - Oct 2024',
       description: [
-        'Architected and deployed automated infrastructure across over forty regions for Azure App Service Managed Certificates that reduces sync time from hours to minutes.',
+        'Scaled Azure App Service Domains from a single region to over thirty-six regions, eliminating the single-region point of failure for more than 80,000 customers.',
         'Developed four-phase plan for Azure App Service Domains global regionalization including fallback, concurrency solutions, data replication, and traffic management.',
         'Led redesign and rollout of database, background job, and data layer changes required for Azure App Service Domains multi-region scaling.',
-        'Spearheaded efforts for domain fraud detection through alerting and implementation of new pre-purchase validation.',
-        'Oversaw maintenance and support for Azure App Service Domains serving over 80,000 customers.',
+        'Cut domain fraud by over 90% through new alerting and the implementation of pre-purchase validation.',
+        'Architected and deployed automated infrastructure across over forty regions for Azure App Service Managed Certificates that reduces sync time from hours to minutes.',
       ],
       badges: [
         ['https://learn.microsoft.com/en-us/azure/app-service/manage-custom-dns-buy-domain','App Service Domains'],
@@ -77,5 +78,31 @@ export const experience_data = {
       ],
     },
 
+  },
+  'Anduril Industries': {
+    logoURL: anduril,
+    // Mark is solid black on transparent; inverting it in dark mode matches
+    // Anduril's own light/dark icon variants.
+    invertOnDark: true,
+    'Software Engineer II': {
+      location: 'Seattle WA',
+      dates: 'Oct 2024 - Jun 2026',
+      description: [
+        'Consolidated fragmented, mostly manual testing into a self-serve simulation platform that made results comparable across methodologies and fidelity levels for the first time, establishing the historical baselines teams rely on to catch regressions.',
+        'Designed and built the platform core including orchestration state machine, full CLI, Go bootstrappers, and containerization, scaling to hundreds of thousands of tests per run on Flyte with automated per-run and aggregate analysis.',
+        'Extended an internal Kubernetes on AWS platform that let roughly 500 engineers self-provision ephemeral test environments, sustaining up to 1,200 concurrent environments across about 1,000 nodes running VMs, pods, and hardware-in-the-loop workloads.',
+        'Enabled self-serve observability with reusable Terraform modules for per-cluster Datadog alerts, and stood up platform services with Helm, Kubernetes manifests, and Terraform.',
+        'Owned platform cost end-to-end, building the billing, chargeback, and cost-prediction tooling Finance uses to bill roughly $1.6M per month in compute to consuming teams.',
+        'Surfaced a topology-spread versus bin-packing scheduling inefficiency that enabled roughly $1.2M per year in realized compute savings.',
+      ],
+      badges: [
+        ['https://go.dev/', 'Go'],
+        ['https://kubernetes.io/', 'Kubernetes'],
+        ['https://www.terraform.io/', 'Terraform'],
+        ['https://helm.sh/', 'Helm'],
+        ['https://flyte.org/', 'Flyte'],
+        ['https://www.datadoghq.com/', 'Datadog'],
+      ],
+    },
   },
 };

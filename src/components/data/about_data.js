@@ -1,8 +1,14 @@
-export const mainText = `I've always been interested in tech and engineering. When I
-was younger, my focus was captured by Lego robotics. As I
-grew older, I discovered the Raspberry Pi and began coding.
-I found the challenge of programming to be exciting. In
-middle school, I was invited to attend a Python bootcamp
-where my passion for software was cemented.`;
+export const mainText = `I've always been obsessed with tech. Growing up, my
+passions were funneled into Lego robotics. In fifth grade, I
+got my first Raspberry Pi and started delving into coding. By
+high school, I had already coded my first game in Python and
+had finished 'Programming for Dummies.' I am interested in the
+cutting edge of software and hardware integrations, as well as
+scalability and reliability. I like to describe my skillset as
+human-centered design, with a focus on minimizing intellectual
+load and maximizing the utility users can extract from their
+machines. I am a huge fan of the Tri-System Theory of Cognitive
+Adaptation, and am quite excited to see where the future leads
+our neural circuitry as it specializes ever further.`;
 
-export const sideText = `Outside of coding I enjoy weightlifting, hiking, photography, and reading. `;
+export const sideText = `Outside of work I enjoy planning, EDM, fashion, and literature (both for research and leisure). `;

@@ -16,6 +16,7 @@ import { experience_data } from '../data/experience_data';
 
 const Company = props => {
   const courseworkColor = useColorModeValue('gray.300', 'gray.600');
+  const logoFilter = useColorModeValue('none', props.invertOnDark ? 'invert(1)' : 'none');
   return (
     <Flex
       mt="6"
@@ -38,6 +39,7 @@ const Company = props => {
           boxSize="40px"
           p="5px"
           mr={1}
+          filter={logoFilter}
         />
         <Text textStyle="h2" mr={1} wordBreak="break-all">
           {props.company}
@@ -130,12 +132,14 @@ const Experience = () => {
               {Object.keys(experience_data)
                 .reverse()
                 .map((company, index) => {
-                  const { logoURL, ...experiences } = experience_data[company];
+                  const { logoURL, invertOnDark, ...experiences } =
+                    experience_data[company];
                   return (
                     <Company
                       key={`company${index}`}
                       company={company}
                       logoURL={logoURL}
+                      invertOnDark={invertOnDark}
                       experiences={experiences}
                     />
                   );

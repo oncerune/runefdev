@@ -4,7 +4,7 @@ import resumepdf from '../../assets/rfresume.pdf';
 export const buttons_data = {
   GitHub: {
     icon: FaGithub,
-    href: 'https://github.com/runefa',
+    href: 'https://github.com/oncerune',
   },
   LinkedIn: {
     icon: FaLinkedin,
