@@ -1,6 +1,6 @@
 export const mainText = `I've always been obsessed with tech. Growing up,
 that went into Lego robotics. My first Raspberry Pi came in
-fifth grade, and coding stuck. By high school I'd written my
+fifth grade, and coding stuck. By the time I started high school I'd written my
 first game in Python and finished 'Programming for Dummies.'
 What interests me now is where software meets hardware, along
 with scalability and reliability. I'd describe my approach as
