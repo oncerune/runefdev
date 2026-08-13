@@ -38,13 +38,14 @@ const Home = () => {
                 Rune
               </Text>
 
-              <Text textStyle="h0">Feisal.</Text>
+              <Text textStyle="h0">Feisal</Text>
             </Stack>
             <Text mt={['4']} mb="2" opacity={0.4}>
               Occupation:
             </Text>
-            <Text mb="2" textStyle="h2">
-              Software Engineer.
+            <Text textStyle="h2">Software Engineer</Text>
+            <Text mb="2" textStyle="body" opacity={0.6}>
+              Platforms / Dev Tooling
             </Text>
 
             <Text mt={['2']} opacity={0.4}>

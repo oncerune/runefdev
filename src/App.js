@@ -42,8 +42,8 @@ function App() {
             >
               <Home />
               <About />
-              <Education />
               <Experience />
+              <Education />
             </PillPity>
           </Box>
         </Flex>

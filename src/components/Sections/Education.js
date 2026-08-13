@@ -9,9 +9,50 @@ import {
   ListItem,
   UnorderedList,
   Grid,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
 } from '@chakra-ui/react';
 
 import { csCourses, statsCourses } from '../data/education_data';
+
+// Collapsed by default so the section leads with the degree rather than a
+// screen of course names.
+const Coursework = ({ label, courses, bg }) => {
+  const half = Math.ceil(courses.length / 2);
+  const column = (items, side) => (
+    <UnorderedList styleType="square">
+      {items.map((item, index) => (
+        <ListItem key={`${label}-${side}${index}`}>
+          <Text textStyle="education">{item}</Text>
+        </ListItem>
+      ))}
+    </UnorderedList>
+  );
+
+  return (
+    <AccordionItem bg={bg} borderRadius="sm" border="none" mt="4">
+      <AccordionButton px={4} py={3} _hover={{ opacity: 0.8 }}>
+        <Box flex="1" textAlign="left">
+          <Text textStyle="body">{label}</Text>
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+      <AccordionPanel px={4} pt={0} pb={4}>
+        <Grid
+          templateColumns={['1fr', null, 'repeat(2, 1fr)']}
+          px={['0', null, '2']}
+          gap={['0', null, '2']}
+        >
+          {column(courses.slice(0, half), 'a')}
+          {column(courses.slice(half), 'b')}
+        </Grid>
+      </AccordionPanel>
+    </AccordionItem>
+  );
+};
 
 const Education = () => {
   const bgColor = useColorModeValue('gray.200', 'gray.700');
@@ -59,75 +100,18 @@ const Education = () => {
               Relevant Coursework:
             </Text>
 
-            <Box bg={courseworkColor} p={4} borderRadius="sm" mt={2}>
-              <Text textStyle="body">Computer Science: </Text>
-              <Grid
-                templateColumns={['1fr', null, 'repeat(2, 1fr)']}
-                px={['0', null, '2']}
-                gap={['0', null, '2']}
-              >
-                <UnorderedList styleType="square">
-                  {csCourses
-                    .slice(0, Math.round(csCourses.length / 2))
-                    .map((item, index) => {
-                      return (
-                        <ListItem key={`parent${index}`}>
-                          <Text textStyle="education">{item}</Text>
-                        </ListItem>
-                      );
-                    })}
-                </UnorderedList>
-                <UnorderedList styleType="square">
-                  {csCourses
-                    .slice(Math.round(csCourses.length / 2))
-                    .map((item, index) => {
-                      return (
-                        <ListItem key={`parent${index}`}>
-                          <Text textStyle="education">{item}</Text>
-                        </ListItem>
-                      );
-                    })}
-                </UnorderedList>
-              </Grid>
-            </Box>
-
-            <Box bg={courseworkColor} p={4} borderRadius="sm" mt="4">
-              <Text textStyle="body">Statistics and Analytics: </Text>
-              <Grid
-                templateColumns={['1fr', null, 'repeat(2, 1fr)']}
-                px={['0', null, '2']}
-                gap={['0', null, '2']}
-              >
-                <UnorderedList styleType="square">
-                  {statsCourses
-                    .slice(
-                      0,
-                      Math.round(statsCourses.length - statsCourses.length / 2)
-                    )
-                    .map((item, index) => {
-                      return (
-                        <ListItem key={`parent${index}`}>
-                          <Text fontSize="md">{item}</Text>
-                        </ListItem>
-                      );
-                    })}
-                </UnorderedList>
-                <UnorderedList styleType="square">
-                  {' '}
-                  {statsCourses
-                    .slice(
-                      Math.round(statsCourses.length - statsCourses.length / 2)
-                    )
-                    .map((item, index) => {
-                      return (
-                        <ListItem key={`parent${index}`}>
-                          <Text fontSize="md">{item}</Text>
-                        </ListItem>
-                      );
-                    })}
-                </UnorderedList>
-              </Grid>
-            </Box>
+            <Accordion allowMultiple>
+              <Coursework
+                label="Computer Science"
+                courses={csCourses}
+                bg={courseworkColor}
+              />
+              <Coursework
+                label="Statistics and Analytics"
+                courses={statsCourses}
+                bg={courseworkColor}
+              />
+            </Accordion>
           </Flex>
         </Box>
       </Flex>
