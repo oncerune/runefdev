@@ -35,13 +35,14 @@ const Company = props => {
       >
         <Image
           src={props.logoURL}
+          alt={`${props.company} logo`}
           fallbackSrc="https://via.placeholder.com/40"
           boxSize="40px"
           p="5px"
           mr={1}
           filter={logoFilter}
         />
-        <Text textStyle="h2" mr={1} wordBreak="break-all">
+        <Text as="h3" textStyle="h2" mr={1} wordBreak="break-all">
           {props.company}
         </Text>
       </Flex>
@@ -65,7 +66,9 @@ const Title = props => {
       <Text textStyle="h4" opacity=".6">
         {props.data.location} · {props.data.dates}
       </Text>
-      <Text textStyle="h3">{props.title}</Text>
+      <Text as="h4" textStyle="h3">
+        {props.title}
+      </Text>
       <Flex direction="row" mt={-1} wrap="wrap">
         {props.data.badges.map((badge, index) => {
           return <EBadge badge={badge} key={index} />;
@@ -126,7 +129,9 @@ const Experience = () => {
       >
         <Box borderTop="2px" bg={bgColor} w="100%" p={6} borderRadius="sm">
           <Flex direction="column" justify="center" textAlign="left">
-            <Text textStyle="h1">Experience</Text>
+            <Text as="h2" textStyle="h1">
+              Experience
+            </Text>
             <Divider borderColor={borderColor} />
             <Flex width="100%" direction="column">
               {Object.keys(experience_data)

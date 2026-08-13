@@ -17,5 +17,7 @@ export const buttons_data = {
   Resume: {
     icon: FaFilePdf,
     href: resumepdf,
+    // Without this the bundled asset saves under its webpack hash.
+    download: 'Rune_Feisal_Resume.pdf',
   },
 };

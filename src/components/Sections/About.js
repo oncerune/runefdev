@@ -35,7 +35,9 @@ const About = () => {
       >
         <Box borderTop="2px" bg={bgColor} w="100%" p={6} borderRadius="sm">
           <Flex direction="column" justify="center" textAlign="left">
-            <Text textStyle="h1">About</Text>
+            <Text as="h2" textStyle="h1">
+              About
+            </Text>
             <Divider borderColor={borderColor} mb="10" />
 
             <Flex
@@ -48,6 +50,7 @@ const About = () => {
                 border="1px"
                 boxSize={['150px', '175px', '200px']}
                 src={rf}
+                alt="Rune Feisal"
                 objectFit="cover"
                 objectPosition="50% 50%"
                 borderRadius="full"

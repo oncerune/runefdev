@@ -33,12 +33,15 @@ const Home = () => {
         <Box borderTop="2px" bg={bgColor} w="100%" p={6} borderRadius="sm">
           <Flex direction={['column', 'column', 'column']} justify="center">
             <Text opacity={0.4}>Name:</Text>
-            <Stack direction={['column', 'row']} spacing="2">
-              <Text textStyle="h0" mr={['0', '4', '6']}>
+            {/* One h1 for the page, split across two spans for the layout. */}
+            <Stack as="h1" direction={['column', 'row']} spacing="2">
+              <Text as="span" textStyle="h0" mr={['0', '4', '6']}>
                 Rune
               </Text>
 
-              <Text textStyle="h0">Feisal</Text>
+              <Text as="span" textStyle="h0">
+                Feisal
+              </Text>
             </Stack>
             <Text mt={['4']} mb="2" opacity={0.4}>
               Occupation:
@@ -59,16 +62,18 @@ const Home = () => {
               gridGap="2"
               spacing={0}
             >
-              {Object.keys(buttons_data).map((name, index) => {
-                const { icon, href } = buttons_data[name];
+              {Object.keys(buttons_data).map(name => {
+                const { icon, href, download } = buttons_data[name];
                 return (
                   <Link
+                    key={name}
                     variant="button"
                     bg={buttonColor}
                     _hover={{
                       bg: hover,
                     }}
                     href={href}
+                    download={download}
                     isExternal
                   >
                     <Icon as={icon} boxSize="5" mt={['auto']} mb={['auto']} />

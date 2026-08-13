@@ -77,10 +77,12 @@ const Education = () => {
       >
         <Box borderTop="2px" bg={bgColor} w="100%" p={6} borderRadius="sm">
           <Flex direction="column" justify="center" textAlign="left">
-            <Text textStyle="h1">Education</Text>
+            <Text as="h2" textStyle="h1">
+              Education
+            </Text>
             <Divider borderColor={borderColor} />
 
-            <Text textStyle="h3" mt="6" color={carolinaBlue}>
+            <Text as="h3" textStyle="h3" mt="6" color={carolinaBlue}>
               University Of North Carolina at Chapel Hill
             </Text>
 

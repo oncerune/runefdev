@@ -35,12 +35,14 @@ const Skills = () => {
       >
         <Box borderTop="2px" bg={bgColor} w="100%" p={6} borderRadius="sm">
           <Flex direction="column" justify="center" textAlign="left">
-            <Text textStyle="h1">Skills</Text>
+            <Text as="h2" textStyle="h1">
+              Skills
+            </Text>
             <Divider borderColor={borderColor} />
 
             {Object.keys(skills_data).map(group => (
               <Box key={group} mt="6">
-                <Text textStyle="body" opacity={0.6} mb="2">
+                <Text as="h3" textStyle="body" opacity={0.6} mb="2">
                   {group}
                 </Text>
                 <Flex direction="row" wrap="wrap" gridGap="2">
