@@ -1,14 +1,12 @@
-export const mainText = `I've always been obsessed with tech. Growing up, my
-passions were funneled into Lego robotics. In fifth grade, I
-got my first Raspberry Pi and started delving into coding. By
-high school, I had already coded my first game in Python and
-had finished 'Programming for Dummies.' What interests me now
-is the cutting edge of software–hardware integration, as well
-as scalability and reliability. I'd describe my approach as
-human-centered design, with a focus on minimizing cognitive
-load and maximizing the utility users can extract from their
-machines. I am a huge fan of Shaw and Nave's Tri-System Theory
-of Cognition, and am quite excited to see where the future
-leads our neural specialization.`;
+export const mainText = `I've always been obsessed with tech. Growing up,
+that went into Lego robotics. My first Raspberry Pi came in
+fifth grade, and coding stuck. By high school I'd written my
+first game in Python and finished 'Programming for Dummies.'
+What interests me now is where software meets hardware, along
+with scalability and reliability. I'd describe my approach as
+human-centered design: minimizing cognitive load and maximizing
+what people can get out of their machines. I'm a big fan of
+Shaw and Nave's Tri-System Theory of Cognition, and excited to
+see where the future leads our neural specialization.`;
 
 export const sideText = `Outside of work I enjoy planning, EDM, fashion, and literature (both for research and leisure). `;
