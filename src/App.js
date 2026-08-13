@@ -8,6 +8,7 @@ import Home from './components/Sections/Home';
 import { PillPity } from 'pill-pity';
 import Education from './components/Sections/Education';
 import Experience from './components/Sections/Experience';
+import Skills from './components/Sections/Skills';
 import Footer from './components/Sections/Footer';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
               <Home />
               <About />
               <Experience />
+              <Skills />
               <Education />
             </PillPity>
           </Box>
