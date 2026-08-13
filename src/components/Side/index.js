@@ -55,7 +55,7 @@ const SideBar = ({ isOpen, toggle }) => {
         />
         {sections.map((name, index) => {
           return (
-            <Text fontSize="3xl" pt={index === 0 ? '40%' : 2}>
+            <Text key={name} fontSize="3xl" pt={index === 0 ? '40%' : 2}>
               <Link to={name} onClick={toggle}>
                 {name.toUpperCase()}
               </Link>

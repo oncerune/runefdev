@@ -37,9 +37,10 @@ const NavBar = () => {
         RF
       </Text>
 
-      {sections.map((name, index) => {
+      {sections.map(name => {
         return (
           <Link
+            key={name}
             to={name}
             smooth={true}
             duration={500}
